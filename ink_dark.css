@@ -447,6 +447,10 @@ main .gsc-loading-image {
   position: relative;
 }
 
+.gsc-comment-box-write:focus-within {
+  box-shadow: none !important;
+}
+
 .gsc-comment-box-textarea {
   width: 100%;
   min-height: 100px;

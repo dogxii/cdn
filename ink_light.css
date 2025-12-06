@@ -377,10 +377,8 @@ main .gsc-loading-image {
 }
 
 .gsc-comment-box:focus-within {
-  border-color: rgb(var(--stone-400)) !important;
-  box-shadow:
-    0 0 0 3px rgba(var(--stone-400), 0.1),
-    0 1px 3px rgba(var(--stone-900), 0.04);
+  border-color: rgb(var(--stone-300)) !important;
+  box-shadow: none !important;
 }
 
 /* Tabs */
@@ -445,6 +443,10 @@ main .gsc-loading-image {
 
 .gsc-comment-box-write {
   position: relative;
+}
+
+.gsc-comment-box-write:focus-within {
+  box-shadow: none;
 }
 
 .gsc-comment-box-textarea {
