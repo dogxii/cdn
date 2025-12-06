@@ -1,0 +1,145 @@
+/*!
+ * Ink Light Theme for giscus
+ * 日间如纸 - Daylight as Paper
+ * 简洁优雅是准则，性能与无障碍是底线。
+ */
+
+main {
+  /* Primary colors - Ink blue accent */
+  --ink-primary: 45, 55, 72;
+  --ink-bg: 250, 250, 250;
+
+  /* Syntax highlighting - clean and readable */
+  --color-prettylights-syntax-comment: #6b7280;
+  --color-prettylights-syntax-constant: #1e40af;
+  --color-prettylights-syntax-entity: #6d28d9;
+  --color-prettylights-syntax-storage-modifier-import: #1f2937;
+  --color-prettylights-syntax-entity-tag: #047857;
+  --color-prettylights-syntax-keyword: #be185d;
+  --color-prettylights-syntax-string: #0369a1;
+  --color-prettylights-syntax-variable: #b45309;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #dc2626;
+  --color-prettylights-syntax-invalid-illegal-text: #fafafa;
+  --color-prettylights-syntax-invalid-illegal-bg: #dc2626;
+  --color-prettylights-syntax-carriage-return-text: #fafafa;
+  --color-prettylights-syntax-carriage-return-bg: #dc2626;
+  --color-prettylights-syntax-string-regexp: #047857;
+  --color-prettylights-syntax-markup-list: #92400e;
+  --color-prettylights-syntax-markup-heading: #1e40af;
+  --color-prettylights-syntax-markup-italic: #1f2937;
+  --color-prettylights-syntax-markup-bold: #1f2937;
+  --color-prettylights-syntax-markup-deleted-text: #dc2626;
+  --color-prettylights-syntax-markup-deleted-bg: #fee2e2;
+  --color-prettylights-syntax-markup-inserted-text: #047857;
+  --color-prettylights-syntax-markup-inserted-bg: #d1fae5;
+  --color-prettylights-syntax-markup-changed-text: #b45309;
+  --color-prettylights-syntax-markup-changed-bg: #fef3c7;
+  --color-prettylights-syntax-markup-ignored-text: #e5e7eb;
+  --color-prettylights-syntax-markup-ignored-bg: #1e40af;
+  --color-prettylights-syntax-meta-diff-range: #6d28d9;
+  --color-prettylights-syntax-brackethighlighter-angle: #6b7280;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #9ca3af;
+  --color-prettylights-syntax-constant-other-reference-link: #0369a1;
+
+  /* Button styles - minimal and clean */
+  --color-btn-text: #1f2937;
+  --color-btn-bg: rgba(var(--ink-bg), 1);
+  --color-btn-border: rgba(var(--ink-bg), 1);
+  --color-btn-shadow: 0 1px 0 rgba(var(--ink-bg), 1);
+  --color-btn-inset-shadow: inset 0 1px 0 rgba(var(--ink-bg), 1);
+  --color-btn-hover-bg: rgba(var(--ink-bg), 0.6);
+  --color-btn-hover-border: rgba(var(--ink-bg), 0.6);
+  --color-btn-active-bg: rgba(var(--ink-primary), 0.15);
+  --color-btn-active-border: rgba(var(--ink-primary), 0.8);
+  --color-btn-selected-bg: rgba(var(--ink-primary), 0.1);
+
+  /* Primary button - ink blue */
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-bg: rgba(var(--ink-primary), 1);
+  --color-btn-primary-border: rgba(var(--ink-primary), 1);
+  --color-btn-primary-shadow: 0 1px 0 rgb(31 35 40 / 8%);
+  --color-btn-primary-inset-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
+  --color-btn-primary-hover-bg: rgba(var(--ink-primary), 0.85);
+  --color-btn-primary-hover-border: rgba(var(--ink-primary), 0.7);
+  --color-btn-primary-selected-bg: rgba(var(--ink-primary), 1);
+  --color-btn-primary-selected-shadow: inset 0 1px 0 rgb(0 0 0 / 15%);
+  --color-btn-primary-disabled-text: rgb(255 255 255 / 70%);
+  --color-btn-primary-disabled-bg: rgba(var(--ink-primary), 0.5);
+  --color-btn-primary-disabled-border: rgba(var(--ink-primary), 0.5);
+
+  /* Action list */
+  --color-action-list-item-default-hover-bg: rgb(229 231 235 / 40%);
+
+  /* Segmented control */
+  --color-segmented-control-bg: #f3f4f6;
+  --color-segmented-control-button-bg: #ffffff;
+  --color-segmented-control-button-selected-border: rgba(var(--ink-bg), 0.9);
+
+  /* Foreground colors - ink on paper */
+  --color-fg-default: #1a1a1a;
+  --color-fg-muted: #4b5563;
+  --color-fg-subtle: #9ca3af;
+
+  /* Canvas colors - paper white */
+  --color-canvas-default: #ffffff;
+  --color-canvas-overlay: #ffffff;
+  --color-canvas-inset: rgba(var(--ink-bg), 0.9);
+  --color-canvas-subtle: rgba(var(--ink-bg), 1);
+
+  /* Border colors - subtle and elegant */
+  --color-border-default: #e5e7eb;
+  --color-border-muted: rgb(229 231 235 / 60%);
+
+  /* Neutral */
+  --color-neutral-muted: rgb(209 213 219 / 30%);
+
+  /* Accent colors - ink blue */
+  --color-accent-fg: rgba(var(--ink-primary), 0.9);
+  --color-accent-emphasis: rgba(var(--ink-primary), 1);
+  --color-accent-muted: rgba(var(--ink-primary), 0.35);
+  --color-accent-subtle: rgba(var(--ink-primary), 0.08);
+
+  /* Status colors */
+  --color-success-fg: #059669;
+  --color-attention-fg: #d97706;
+  --color-attention-muted: rgb(217 119 6 / 35%);
+  --color-attention-subtle: #fef3c7;
+  --color-danger-fg: #dc2626;
+  --color-danger-muted: rgb(220 38 38 / 35%);
+  --color-danger-subtle: #fee2e2;
+
+  /* Shadow */
+  --color-primer-shadow-inset: 0 1px 0 rgba(var(--ink-bg), 1), inset 0 1px 0 rgba(var(--ink-bg), 1);
+
+  /* Scale colors for reactions */
+  --color-scale-gray-1: #f3f4f6;
+  --color-scale-blue-1: rgba(var(--ink-primary), 0.12);
+
+  /*! Extensions from @primer/css/alerts/flash.scss */
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+main .pagination-loader-container {
+  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
+}
+
+main .gsc-loading-image {
+  background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
+}
+
+/*! Ink theme customizations - clean and minimal */
+
+/* Remove unnecessary visual noise */
+.gsc-comment-box {
+  border-radius: 8px;
+}
+
+.gsc-comment {
+  border-radius: 8px;
+}
+
+/* Elegant hover states */
+.gsc-comment:hover {
+  background-color: rgba(var(--ink-bg), 0.5);
+}
