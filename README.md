@@ -1,2 +1,7 @@
-# nothing
-Temporary public files for sharing external links.
+# cdn
+
+host small static assets for publick access.
+
+```md
+📁 giscs -> jsdelivr -> blog.dogxi.me
+```
