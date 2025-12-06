@@ -351,13 +351,11 @@ main .gsc-loading-image {
 }
 
 .BtnGroup-item .btn:hover {
-  background-color: rgb(var(--stone-800));
   color: rgb(var(--stone-300));
 }
 
 .BtnGroup-item--selected .btn {
-  background-color: rgb(var(--stone-200)) !important;
-  color: rgb(var(--stone-900)) !important;
+  color: rgb(var(--stone-300)) !important;
 }
 
 /* ========================================
@@ -448,7 +446,7 @@ main .gsc-loading-image {
 }
 
 .gsc-comment-box-write:focus-within {
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .gsc-comment-box-textarea {

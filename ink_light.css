@@ -347,7 +347,6 @@ main .gsc-loading-image {
   border-radius: 0 !important;
   background-color: transparent;
   color: rgb(var(--stone-500));
-  transition: all 0.15s ease;
 }
 
 .BtnGroup-item .btn:hover {
@@ -356,8 +355,7 @@ main .gsc-loading-image {
 }
 
 .BtnGroup-item--selected .btn {
-  background-color: rgb(var(--stone-800)) !important;
-  color: #ffffff !important;
+  color: rgb(var(--stone-800));
 }
 
 /* ========================================
