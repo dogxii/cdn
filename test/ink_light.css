@@ -1,0 +1,1224 @@
+/*!
+ * Ink Light Theme for giscus
+ * 日间如纸 - Daylight as Paper
+ * 基于 Tailwind stone 色系
+ * 简洁优雅是准则，性能与无障碍是底线。
+ */
+
+main {
+	/* Stone color palette (Tailwind CSS stone) */
+	--stone-50: 250, 250, 249;
+	--stone-100: 245, 245, 244;
+	--stone-200: 231, 229, 228;
+	--stone-300: 214, 211, 209;
+	--stone-400: 168, 162, 158;
+	--stone-500: 120, 113, 108;
+	--stone-600: 87, 83, 78;
+	--stone-700: 68, 64, 60;
+	--stone-800: 41, 37, 36;
+	--stone-900: 28, 25, 23;
+	--stone-950: 12, 10, 9;
+
+	/* Syntax highlighting */
+	--color-prettylights-syntax-comment: rgb(var(--stone-500));
+	--color-prettylights-syntax-constant: #1e40af;
+	--color-prettylights-syntax-entity: #6d28d9;
+	--color-prettylights-syntax-storage-modifier-import: rgb(var(--stone-800));
+	--color-prettylights-syntax-entity-tag: #047857;
+	--color-prettylights-syntax-keyword: #be185d;
+	--color-prettylights-syntax-string: #0369a1;
+	--color-prettylights-syntax-variable: #b45309;
+	--color-prettylights-syntax-brackethighlighter-unmatched: #dc2626;
+	--color-prettylights-syntax-invalid-illegal-text: rgb(var(--stone-50));
+	--color-prettylights-syntax-invalid-illegal-bg: #dc2626;
+	--color-prettylights-syntax-carriage-return-text: rgb(var(--stone-50));
+	--color-prettylights-syntax-carriage-return-bg: #dc2626;
+	--color-prettylights-syntax-string-regexp: #047857;
+	--color-prettylights-syntax-markup-list: #92400e;
+	--color-prettylights-syntax-markup-heading: #1e40af;
+	--color-prettylights-syntax-markup-italic: rgb(var(--stone-800));
+	--color-prettylights-syntax-markup-bold: rgb(var(--stone-800));
+	--color-prettylights-syntax-markup-deleted-text: #dc2626;
+	--color-prettylights-syntax-markup-deleted-bg: #fee2e2;
+	--color-prettylights-syntax-markup-inserted-text: #047857;
+	--color-prettylights-syntax-markup-inserted-bg: #d1fae5;
+	--color-prettylights-syntax-markup-changed-text: #b45309;
+	--color-prettylights-syntax-markup-changed-bg: #fef3c7;
+	--color-prettylights-syntax-markup-ignored-text: rgb(var(--stone-200));
+	--color-prettylights-syntax-markup-ignored-bg: #1e40af;
+	--color-prettylights-syntax-meta-diff-range: #6d28d9;
+	--color-prettylights-syntax-brackethighlighter-angle: rgb(var(--stone-500));
+	--color-prettylights-syntax-sublimelinter-gutter-mark: rgb(var(--stone-400));
+	--color-prettylights-syntax-constant-other-reference-link: #0369a1;
+
+	/* Button styles */
+	--color-btn-text: rgb(var(--stone-700));
+	--color-btn-bg: rgb(var(--stone-100));
+	--color-btn-border: rgb(var(--stone-200));
+	--color-btn-shadow: 0 1px 0 rgba(var(--stone-900), 0.04);
+	--color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+	--color-btn-hover-bg: rgb(var(--stone-200));
+	--color-btn-hover-border: rgb(var(--stone-300));
+	--color-btn-active-bg: rgb(var(--stone-200));
+	--color-btn-active-border: rgb(var(--stone-400));
+	--color-btn-selected-bg: rgb(var(--stone-200));
+
+	/* Primary button */
+	--color-btn-primary-text: #ffffff;
+	--color-btn-primary-bg: rgb(var(--stone-800));
+	--color-btn-primary-border: rgb(var(--stone-700));
+	--color-btn-primary-shadow: 0 1px 0 rgba(var(--stone-900), 0.1);
+	--color-btn-primary-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+	--color-btn-primary-hover-bg: rgb(var(--stone-700));
+	--color-btn-primary-hover-border: rgb(var(--stone-600));
+	--color-btn-primary-selected-bg: rgb(var(--stone-900));
+	--color-btn-primary-selected-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+	--color-btn-primary-disabled-text: rgba(255, 255, 255, 0.5);
+	--color-btn-primary-disabled-bg: rgba(var(--stone-800), 0.6);
+	--color-btn-primary-disabled-border: rgba(var(--stone-700), 0.6);
+
+	/* Action list */
+	--color-action-list-item-default-hover-bg: rgba(var(--stone-200), 0.5);
+
+	/* Segmented control */
+	--color-segmented-control-bg: rgb(var(--stone-100));
+	--color-segmented-control-button-bg: #ffffff;
+	--color-segmented-control-button-selected-border: rgb(var(--stone-200));
+
+	/* Foreground colors */
+	--color-fg-default: rgb(var(--stone-900));
+	--color-fg-muted: rgb(var(--stone-600));
+	--color-fg-subtle: rgb(var(--stone-500));
+
+	/* Canvas colors */
+	--color-canvas-default: rgb(var(--stone-50));
+	--color-canvas-overlay: #ffffff;
+	--color-canvas-inset: rgb(var(--stone-100));
+	--color-canvas-subtle: rgb(var(--stone-100));
+
+	/* Border colors */
+	--color-border-default: rgb(var(--stone-200));
+	--color-border-muted: rgba(var(--stone-200), 0.7);
+
+	/* Neutral */
+	--color-neutral-muted: rgba(var(--stone-300), 0.4);
+
+	/* Accent colors */
+	--color-accent-fg: rgb(var(--stone-700));
+	--color-accent-emphasis: rgb(var(--stone-800));
+	--color-accent-muted: rgba(var(--stone-600), 0.4);
+	--color-accent-subtle: rgba(var(--stone-200), 0.5);
+
+	/* Status colors */
+	--color-success-fg: #059669;
+	--color-attention-fg: #d97706;
+	--color-attention-muted: rgba(217, 119, 6, 0.4);
+	--color-attention-subtle: #fef3c7;
+	--color-danger-fg: #dc2626;
+	--color-danger-muted: rgba(220, 38, 38, 0.4);
+	--color-danger-subtle: #fee2e2;
+
+	/* Shadow */
+	--color-primer-shadow-inset: inset 0 1px 0 rgba(var(--stone-200), 0.2);
+
+	/* Scale colors for reactions */
+	--color-scale-gray-1: rgb(var(--stone-100));
+	--color-scale-blue-1: rgba(var(--stone-600), 0.15);
+
+	/* Social reactions */
+	--color-social-reaction-bg-hover: var(--color-scale-gray-1);
+	--color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+main .pagination-loader-container {
+	background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
+}
+
+main .gsc-loading-image {
+	background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
+}
+
+/* ========================================
+   Ink Theme Layout & Style Customizations
+   ======================================== */
+
+/* Main container - Typography */
+.gsc-main {
+	font-family:
+		"Inter", ui-sans-serif, system-ui, -apple-system, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.6;
+}
+
+/* ========================================
+   Top Reactions Section - Compact Design
+   ======================================== */
+
+.gsc-reactions {
+	padding: 1rem 0;
+	margin-bottom: 0.5rem;
+	border: none !important;
+	background: transparent;
+}
+
+.gsc-reactions-count {
+	font-size: 0.8125rem;
+	font-weight: 500;
+	color: rgb(var(--stone-600));
+}
+
+.gsc-reactions-count a {
+	color: rgb(var(--stone-600)) !important;
+	text-decoration: none !important;
+	transition: color 0.2s ease;
+}
+
+.gsc-reactions-count a:hover {
+	color: rgb(var(--stone-900)) !important;
+}
+
+/* Reaction buttons row */
+.gsc-direct-reaction-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.375rem;
+}
+
+/* Individual reaction button - Pill style */
+.gsc-direct-reaction-button,
+.gsc-social-reaction-summary-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.25rem 0.625rem;
+	border-radius: 9999px !important;
+	border: 1px solid rgb(var(--stone-200)) !important;
+	background-color: rgb(var(--stone-50)) !important;
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: rgb(var(--stone-600));
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	cursor: pointer;
+}
+
+.gsc-direct-reaction-button:hover,
+.gsc-social-reaction-summary-item:hover {
+	background-color: rgb(var(--stone-100)) !important;
+	border-color: rgb(var(--stone-300)) !important;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(var(--stone-900), 0.08);
+}
+
+.gsc-direct-reaction-button:active,
+.gsc-social-reaction-summary-item:active {
+	transform: translateY(0);
+	box-shadow: none;
+}
+
+.gsc-direct-reaction-button:focus-visible,
+.gsc-social-reaction-summary-item:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 2px;
+}
+
+.gsc-direct-reaction-button-emoji {
+	font-size: 0.875rem;
+	line-height: 1;
+	transition: transform 0.2s ease;
+}
+
+.gsc-direct-reaction-button:hover .gsc-direct-reaction-button-emoji {
+	transform: scale(1.2);
+}
+
+.gsc-social-reaction-summary-item-count {
+	font-size: 0.75rem;
+	color: rgb(var(--stone-500));
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+
+/* Add reaction button */
+.gsc-reactions-button {
+	padding: 0.25rem 0.5rem !important;
+	border-radius: 9999px !important;
+	border: 1px dashed rgb(var(--stone-300)) !important;
+	background: transparent !important;
+	color: rgb(var(--stone-400)) !important;
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gsc-reactions-button:hover {
+	border-style: solid !important;
+	border-color: rgb(var(--stone-400)) !important;
+	color: rgb(var(--stone-600)) !important;
+	background-color: rgb(var(--stone-100)) !important;
+	transform: translateY(-1px);
+}
+
+.gsc-reactions-button:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 2px;
+}
+
+/* Reactions popover */
+.gsc-reactions-popover {
+	border-radius: 0.75rem !important;
+	border: 1px solid rgb(var(--stone-200)) !important;
+	box-shadow:
+		0 10px 40px -10px rgba(var(--stone-900), 0.15),
+		0 4px 6px -2px rgba(var(--stone-900), 0.05) !important;
+	padding: 0.5rem !important;
+	background: #ffffff !important;
+	animation: popoverFadeIn 0.2s ease-out;
+}
+
+@keyframes popoverFadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95) translateY(-4px);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+.gsc-emoji-button {
+	border-radius: 0.5rem !important;
+	padding: 0.5rem !important;
+	transition: all 0.15s ease;
+}
+
+.gsc-emoji-button:hover {
+	background-color: rgb(var(--stone-100)) !important;
+	transform: scale(1.15);
+}
+
+.gsc-emoji-button:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 1px;
+}
+
+.gsc-emoji {
+	font-size: 1.25rem;
+}
+
+/* ========================================
+   Header Section - Minimal Design
+   ======================================== */
+
+.gsc-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 0;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid rgb(var(--stone-200)) !important;
+}
+
+.gsc-left-header {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.8125rem;
+	color: rgb(var(--stone-500));
+}
+
+.gsc-comments-count {
+	font-weight: 600;
+	color: rgb(var(--stone-700));
+}
+
+.gsc-comments-count a {
+	color: rgb(var(--stone-700)) !important;
+	text-decoration: none !important;
+	transition: color 0.2s ease;
+}
+
+.gsc-comments-count a:hover {
+	color: rgb(var(--stone-900)) !important;
+}
+
+.gsc-comments-count-separator {
+	color: rgb(var(--stone-300));
+}
+
+.gsc-replies-count {
+	color: rgb(var(--stone-500));
+	font-weight: 400;
+}
+
+/* giscus credit - subtle */
+.gsc-left-header em {
+	font-style: normal;
+	color: rgb(var(--stone-400));
+	font-size: 0.75rem;
+}
+
+.gsc-left-header em a {
+	color: rgb(var(--stone-400)) !important;
+	transition: color 0.2s ease;
+}
+
+.gsc-left-header em a:hover {
+	color: rgb(var(--stone-600)) !important;
+}
+
+/* Sort buttons */
+.gsc-right-header {
+	display: flex;
+	gap: 0;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	border: 1px solid rgb(var(--stone-200));
+}
+
+.BtnGroup-item {
+	list-style: none;
+}
+
+.BtnGroup-item .btn {
+	padding: 0.375rem 0.75rem;
+	font-size: 0.75rem;
+	font-weight: 500;
+	border: none !important;
+	border-radius: 0 !important;
+	background-color: transparent;
+	color: rgb(var(--stone-500));
+	transition: all 0.15s ease;
+}
+
+.BtnGroup-item .btn:hover {
+	background-color: rgb(var(--stone-100));
+	color: rgb(var(--stone-700));
+}
+
+.BtnGroup-item .btn:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: -2px;
+}
+
+.BtnGroup-item--selected .btn {
+	color: rgb(var(--stone-800));
+	background-color: rgb(var(--stone-100));
+}
+
+/* ========================================
+   Comment Input Box - Clean Design
+   ======================================== */
+
+.gsc-comment-box {
+	border: 1px solid rgb(var(--stone-200)) !important;
+	border-radius: 0.75rem !important;
+	background-color: #ffffff !important;
+	overflow: hidden;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 1px 3px rgba(var(--stone-900), 0.04);
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.gsc-comment-box:focus-within {
+	border-color: rgb(var(--stone-400)) !important;
+	box-shadow: 0 0 0 3px rgba(var(--stone-400), 0.1) !important;
+}
+
+/* Tabs */
+.gsc-comment-box-tabs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 0.75rem;
+	background-color: rgb(var(--stone-50)) !important;
+	border-bottom: 1px solid rgb(var(--stone-200)) !important;
+}
+
+.gsc-comment-box-tabs > div:first-child {
+	display: flex;
+	gap: 0.25rem;
+}
+
+.gsc-comment-box-tabs button {
+	padding: 0.375rem 0.75rem !important;
+	font-size: 0.8125rem !important;
+	font-weight: 500;
+	border-radius: 0.375rem !important;
+	border: none !important;
+	background-color: transparent !important;
+	color: rgb(var(--stone-500));
+	transition: all 0.15s ease;
+}
+
+.gsc-comment-box-tabs button:hover {
+	background-color: rgb(var(--stone-100)) !important;
+	color: rgb(var(--stone-700));
+}
+
+.gsc-comment-box-tabs button:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 1px;
+}
+
+.gsc-comment-box-tabs button.color-bg-canvas {
+	background-color: #ffffff !important;
+	color: rgb(var(--stone-800));
+	box-shadow: 0 1px 2px rgba(var(--stone-900), 0.05);
+}
+
+/* Toolbar */
+.gsc-comment-box-md-toolbar {
+	display: flex;
+	align-items: center;
+}
+
+.gsc-toolbar-item {
+	padding: 0.375rem;
+	border-radius: 0.375rem;
+	color: rgb(var(--stone-400));
+	transition: all 0.15s ease;
+}
+
+.gsc-toolbar-item:hover {
+	background-color: rgb(var(--stone-100));
+	color: rgb(var(--stone-600));
+}
+
+.gsc-toolbar-item:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 1px;
+}
+
+/* Textarea */
+.gsc-comment-box-main {
+	padding: 0 !important;
+}
+
+.gsc-comment-box-write {
+	position: relative;
+}
+
+.gsc-comment-box-write:focus-within {
+	box-shadow: none;
+}
+
+.gsc-comment-box-textarea {
+	width: 100%;
+	min-height: 100px;
+	padding: 0.875rem 1rem !important;
+	border: none !important;
+	border-radius: 0 !important;
+	background-color: #ffffff !important;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	color: rgb(var(--stone-800));
+	resize: vertical;
+	transition: background-color 0.15s ease;
+	caret-color: rgb(var(--stone-600));
+}
+
+.gsc-comment-box-textarea::placeholder {
+	color: rgb(var(--stone-400));
+}
+
+.gsc-comment-box-textarea:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	background-color: rgb(var(--stone-50)) !important;
+}
+
+/* Markdown hint */
+.gsc-comment-box-textarea-extras {
+	position: absolute;
+	bottom: 0.5rem;
+	right: 0.75rem;
+	padding: 0 !important;
+	border: none !important;
+	background: transparent !important;
+}
+
+.gsc-comment-box-markdown-hint {
+	color: rgb(var(--stone-400)) !important;
+	opacity: 0.6;
+	transition: opacity 0.15s ease;
+}
+
+.gsc-comment-box-markdown-hint:hover {
+	opacity: 1;
+}
+
+/* Bottom bar */
+.gsc-comment-box-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 1rem;
+	background-color: rgb(var(--stone-50)) !important;
+	border-top: 1px solid rgb(var(--stone-100));
+}
+
+.gsc-comment-box-bottom > button {
+	color: rgb(var(--stone-500)) !important;
+	font-size: 0.8125rem;
+	transition: color 0.15s ease;
+}
+
+.gsc-comment-box-bottom > button:hover {
+	color: rgb(var(--stone-700)) !important;
+}
+
+/* Submit button */
+.gsc-comment-box-buttons .btn {
+	padding: 0.5rem 1rem !important;
+	font-size: 0.8125rem !important;
+	font-weight: 600 !important;
+	border-radius: 0.5rem !important;
+	background-color: rgb(var(--stone-800)) !important;
+	color: #ffffff !important;
+	border: none !important;
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gsc-comment-box-buttons .btn:hover:not(:disabled) {
+	background-color: rgb(var(--stone-700)) !important;
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(var(--stone-900), 0.15);
+}
+
+.gsc-comment-box-buttons .btn:active:not(:disabled) {
+	transform: translateY(0);
+	box-shadow: none;
+}
+
+.gsc-comment-box-buttons .btn:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 2px;
+}
+
+.gsc-comment-box-buttons .btn:disabled {
+	background-color: rgb(var(--stone-300)) !important;
+	color: rgb(var(--stone-500)) !important;
+	cursor: not-allowed;
+	transform: none;
+}
+
+/* ========================================
+   Timeline & Comments - Modern Cards
+   ======================================== */
+
+.gsc-timeline {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+/* Comment card */
+.gsc-comment {
+	position: relative;
+	border: none !important;
+	border-radius: 0.75rem !important;
+	background-color: transparent !important;
+	animation: commentSlideIn 0.3s ease-out;
+}
+
+@keyframes commentSlideIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.gsc-comment > div:first-child {
+	border: 1px solid rgb(var(--stone-200)) !important;
+	border-radius: 0.75rem !important;
+	background-color: #ffffff !important;
+	overflow: hidden;
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease,
+		transform 0.2s ease;
+}
+
+.gsc-comment:hover > div:first-child {
+	border-color: rgb(var(--stone-300)) !important;
+	box-shadow: 0 4px 16px rgba(var(--stone-900), 0.06);
+}
+
+/* Comment header */
+.gsc-comment-header {
+	display: flex;
+	align-items: center;
+	padding: 0.875rem 1rem;
+	background-color: rgb(var(--stone-50)) !important;
+	border-bottom: 1px solid rgb(var(--stone-100));
+}
+
+.gsc-comment-author {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.gsc-comment-author-avatar {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	text-decoration: none !important;
+}
+
+.gsc-comment-author-avatar img {
+	width: 28px !important;
+	height: 28px !important;
+	border-radius: 0.375rem !important;
+	margin-right: 0 !important;
+	transition: transform 0.2s ease;
+}
+
+.gsc-comment-author-avatar:hover img {
+	transform: scale(1.1);
+}
+
+.gsc-comment-author-avatar span {
+	font-weight: 600;
+	font-size: 0.875rem;
+	color: rgb(var(--stone-800)) !important;
+	transition: color 0.15s ease;
+}
+
+.gsc-comment-author-avatar span:hover {
+	color: rgb(var(--stone-900)) !important;
+}
+
+/* Timestamp */
+.gsc-comment-header time {
+	font-size: 0.75rem;
+	color: rgb(var(--stone-400));
+}
+
+/* Comment content */
+.gsc-comment-content {
+	padding: 1rem !important;
+	border: none !important;
+	background: transparent !important;
+}
+
+.gsc-comment-content .markdown-body,
+.gsc-comment-content .markdown {
+	font-size: 0.9375rem;
+	line-height: 1.7;
+	color: rgb(var(--stone-700));
+}
+
+.gsc-comment-content .markdown-body p,
+.gsc-comment-content .markdown p {
+	margin-bottom: 0.75rem;
+}
+
+.gsc-comment-content .markdown-body p:last-child,
+.gsc-comment-content .markdown p:last-child {
+	margin-bottom: 0;
+}
+
+/* Comment content code blocks */
+.gsc-comment-content .markdown-body pre,
+.gsc-comment-content .markdown pre {
+	background-color: rgb(var(--stone-100)) !important;
+	border-radius: 0.5rem;
+	padding: 0.75rem 1rem;
+	overflow-x: auto;
+}
+
+.gsc-comment-content .markdown-body code,
+.gsc-comment-content .markdown code {
+	font-size: 0.875em;
+	background-color: rgb(var(--stone-100));
+	padding: 0.125rem 0.375rem;
+	border-radius: 0.25rem;
+}
+
+.gsc-comment-content .markdown-body pre code,
+.gsc-comment-content .markdown pre code {
+	background: transparent;
+	padding: 0;
+}
+
+/* Comment footer */
+.gsc-comment-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 1rem;
+	background-color: rgb(var(--stone-50)) !important;
+	border-top: 1px solid rgb(var(--stone-100));
+}
+
+.gsc-comment-reactions {
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+}
+
+/* Upvote button */
+.gsc-upvote-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: 9999px !important;
+	border: 1px solid rgb(var(--stone-200)) !important;
+	background-color: transparent !important;
+	color: rgb(var(--stone-500));
+	font-size: 0.75rem;
+	font-weight: 500;
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gsc-upvote-button:hover:not(:disabled) {
+	background-color: rgb(var(--stone-100)) !important;
+	border-color: rgb(var(--stone-300)) !important;
+	color: rgb(var(--stone-700));
+	transform: translateY(-1px);
+}
+
+.gsc-upvote-button:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 2px;
+}
+
+/* Reply count */
+.gsc-comment-replies-count {
+	font-size: 0.75rem;
+	color: rgb(var(--stone-400));
+}
+
+/* ========================================
+   Replies Section - Nested Design
+   ======================================== */
+
+.gsc-replies {
+	margin: 0 !important;
+	padding: 0.75rem 1rem !important;
+	background-color: rgb(var(--stone-50)) !important;
+	border-top: 1px solid rgb(var(--stone-100)) !important;
+	border-radius: 0 !important;
+}
+
+/* Timeline line */
+.gsc-tl-line {
+	display: none !important;
+}
+
+/* Show older replies button */
+.gsc-replies > div:first-child button {
+	color: rgb(var(--stone-500)) !important;
+	font-size: 0.8125rem;
+	font-weight: 500;
+	text-decoration: none !important;
+	transition: color 0.15s ease;
+}
+
+.gsc-replies > div:first-child button:hover {
+	color: rgb(var(--stone-700)) !important;
+}
+
+/* Reply item */
+.gsc-reply {
+	padding: 0.75rem 0;
+	border-bottom: 1px solid rgb(var(--stone-200));
+	animation: replyFadeIn 0.25s ease-out;
+}
+
+@keyframes replyFadeIn {
+	from {
+		opacity: 0;
+		transform: translateX(-5px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.gsc-reply:last-of-type {
+	border-bottom: none;
+}
+
+.gsc-reply > div:last-child {
+	display: flex;
+	gap: 0.75rem;
+}
+
+/* Reply avatar */
+.gsc-reply-author-avatar {
+	flex-shrink: 0;
+}
+
+.gsc-reply-author-avatar img {
+	width: 24px !important;
+	height: 24px !important;
+	border-radius: 0.375rem !important;
+	transition: transform 0.2s ease;
+}
+
+.gsc-reply-author-avatar:hover img {
+	transform: scale(1.1);
+}
+
+/* Reply content wrapper */
+.gsc-reply > div:last-child > div:last-child {
+	flex: 1;
+	min-width: 0;
+}
+
+/* Reply header */
+.gsc-reply-header {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.25rem;
+}
+
+.gsc-reply-author {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.gsc-reply-author a span {
+	font-weight: 600;
+	font-size: 0.8125rem;
+	color: rgb(var(--stone-700)) !important;
+	transition: color 0.15s ease;
+}
+
+.gsc-reply-author a:hover span {
+	color: rgb(var(--stone-900)) !important;
+}
+
+.gsc-reply-header time {
+	font-size: 0.6875rem;
+	color: rgb(var(--stone-400));
+}
+
+/* Reply content */
+.gsc-reply-content {
+	font-size: 0.875rem;
+	line-height: 1.6;
+	color: rgb(var(--stone-600));
+	padding: 0 !important;
+	border: none !important;
+}
+
+/* Reply footer */
+.gsc-reply-footer {
+	margin-top: 0.5rem;
+}
+
+.gsc-reply-reactions {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+/* Reply box at bottom */
+.gsc-reply-box {
+	margin-top: 0.75rem;
+	padding-top: 0.75rem;
+	border-top: 1px solid rgb(var(--stone-200)) !important;
+	background: transparent !important;
+}
+
+.gsc-reply-box button,
+.gsc-reply-box .form-control {
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.8125rem;
+	color: rgb(var(--stone-400));
+	background-color: #ffffff !important;
+	border: 1px solid rgb(var(--stone-200)) !important;
+	border-radius: 0.5rem !important;
+	text-align: left;
+	transition: all 0.15s ease;
+	cursor: text;
+}
+
+.gsc-reply-box button:hover,
+.gsc-reply-box .form-control:hover {
+	border-color: rgb(var(--stone-300)) !important;
+	background-color: rgb(var(--stone-50)) !important;
+}
+
+.gsc-reply-box button:focus-visible,
+.gsc-reply-box .form-control:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 1px;
+}
+
+/* ========================================
+   Pagination
+   ======================================== */
+
+.gsc-pagination {
+	margin: 1.5rem 0;
+}
+
+.gsc-pagination-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 100%;
+	padding: 0.75rem 1rem;
+	font-size: 0.8125rem;
+	color: rgb(var(--stone-500));
+	background-color: rgb(var(--stone-50)) !important;
+	border: 1px solid rgb(var(--stone-200)) !important;
+	border-radius: 0.5rem !important;
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	cursor: pointer;
+}
+
+.gsc-pagination-button:hover {
+	background-color: rgb(var(--stone-100)) !important;
+	border-color: rgb(var(--stone-300)) !important;
+	transform: translateY(-1px);
+}
+
+.gsc-pagination-button:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 2px;
+}
+
+.gsc-pagination-button span:last-child {
+	font-weight: 600;
+	color: rgb(var(--stone-700));
+}
+
+/* ========================================
+   Empty & Loading States
+   ======================================== */
+
+.gsc-empty {
+	padding: 3rem 1rem;
+	text-align: center;
+	color: rgb(var(--stone-500));
+	font-size: 0.9375rem;
+}
+
+.gsc-loading {
+	padding: 2rem;
+	text-align: center;
+}
+
+.gsc-loading-image {
+	width: 40px;
+	height: 40px;
+	opacity: 0.6;
+	animation: loadingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingPulse {
+	0%,
+	100% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 0.3;
+	}
+}
+
+/* ========================================
+   Links & Interactive Elements
+   ======================================== */
+
+.gsc-main a {
+	color: rgb(var(--stone-600));
+	text-decoration: none;
+	transition: color 0.15s ease;
+}
+
+.gsc-main a:hover {
+	color: rgb(var(--stone-900));
+}
+
+.gsc-main a:focus-visible {
+	outline: 2px solid rgb(var(--stone-400));
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+.link-primary {
+	color: rgb(var(--stone-700)) !important;
+}
+
+.link-primary:hover {
+	color: rgb(var(--stone-900)) !important;
+}
+
+.link-secondary {
+	color: rgb(var(--stone-500)) !important;
+}
+
+.link-secondary:hover {
+	color: rgb(var(--stone-700)) !important;
+}
+
+/* Underline links */
+.gsc-comments-count a {
+	text-decoration: underline !important;
+	text-decoration-color: rgb(var(--stone-300)) !important;
+	text-underline-offset: 2px;
+	transition: text-decoration-color 0.15s ease;
+}
+
+.gsc-comments-count a:hover {
+	text-decoration-color: rgb(var(--stone-500)) !important;
+}
+
+/* ========================================
+   Scrollbar
+   ======================================== */
+
+.gsc-comment-box textarea::-webkit-scrollbar,
+.gsc-replies::-webkit-scrollbar {
+	width: 6px;
+}
+
+.gsc-comment-box textarea::-webkit-scrollbar-track,
+.gsc-replies::-webkit-scrollbar-track {
+	background: rgb(var(--stone-100));
+	border-radius: 3px;
+}
+
+.gsc-comment-box textarea::-webkit-scrollbar-thumb,
+.gsc-replies::-webkit-scrollbar-thumb {
+	background: rgb(var(--stone-300));
+	border-radius: 3px;
+}
+
+.gsc-comment-box textarea::-webkit-scrollbar-thumb:hover,
+.gsc-replies::-webkit-scrollbar-thumb:hover {
+	background: rgb(var(--stone-400));
+}
+
+/* ========================================
+   Selection
+   ======================================== */
+
+.gsc-main ::selection {
+	background-color: rgba(var(--stone-400), 0.25);
+}
+
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+
+@media (max-width: 640px) {
+	.gsc-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.75rem;
+	}
+
+	.gsc-right-header {
+		width: 100%;
+	}
+
+	.BtnGroup-item {
+		flex: 1;
+	}
+
+	.BtnGroup-item .btn {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.gsc-comment-author {
+		flex-wrap: wrap;
+	}
+
+	.gsc-direct-reaction-buttons {
+		gap: 0.25rem;
+	}
+
+	.gsc-direct-reaction-button,
+	.gsc-social-reaction-summary-item {
+		padding: 0.1875rem 0.5rem;
+		font-size: 0.6875rem;
+	}
+
+	.gsc-comment-box-textarea {
+		min-height: 80px;
+		font-size: 1rem; /* Prevent iOS zoom */
+	}
+
+	.gsc-comment-content {
+		padding: 0.75rem !important;
+	}
+
+	.gsc-comment-header {
+		padding: 0.75rem;
+	}
+
+	.gsc-comment-footer {
+		padding: 0.625rem 0.75rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.gsc-reply {
+		padding: 0.5rem 0;
+	}
+
+	.gsc-replies {
+		padding: 0.5rem 0.75rem !important;
+	}
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+
+@media print {
+	.gsc-comment-box,
+	.gsc-reactions-button,
+	.gsc-right-header,
+	.gsc-reply-box,
+	.gsc-pagination {
+		display: none !important;
+	}
+
+	.gsc-comment > div:first-child {
+		border: 1px solid #ddd !important;
+		box-shadow: none !important;
+	}
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+	.gsc-direct-reaction-button,
+	.gsc-social-reaction-summary-item,
+	.gsc-reactions-button,
+	.gsc-comment-box-buttons .btn,
+	.gsc-upvote-button,
+	.gsc-pagination-button,
+	.gsc-comment,
+	.gsc-reply,
+	.gsc-emoji-button,
+	.gsc-reactions-popover {
+		transition: none !important;
+		animation: none !important;
+		transform: none !important;
+	}
+}
